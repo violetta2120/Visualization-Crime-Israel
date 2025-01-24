@@ -27,40 +27,6 @@ st.markdown(
             min-width: 250px !important;
             max-width: 250px !important;
         }
-    /* Sidebar styling */
-    [data-testid="stSidebar"] {
-        background-color: #f8edeb; /* Dark blue background */
-        color: white; /* White text color */
-        padding: 10px; /* Inner padding */
-    }
-    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
-        color: #0a0908; /* Yellow headings */
-    }
-    [data-testid="stSidebar"] .st-radio {
-        color: white !important; /* Ensure radio buttons have white text */
-    }
-
-    /* Main content area styling */
-    .main {
-        padding: 20px; /* Add spacing around main content */
-        font-family: 'Arial', sans-serif; /* Custom font for main content */
-    }
-
-    /* Custom headers */
-    h1 {
-        color: #003366; /* Dark blue headers */
-        font-size: 2.5rem; /* Larger font size for titles */
-        font-weight: bold; /* Bold font */
-        margin-bottom: 20px; /* Spacing after header */
-    }
-
-    /* Links and hover effects */
-    a {
-        color: #ffcc00 !important; /* Yellow links */
-    }
-    a:hover {
-        color: #ff9900 !important; /* Orange on hover */
-    }
     </style>
     """,
     unsafe_allow_html=True,
