@@ -590,7 +590,7 @@ def matala2(crimes, education_df):
     with col1:
         selected_crime = st.selectbox("Select Type of Crime", crime_options, index=default_crime_index)
     with col2:
-        selected_rate = st.selectbox("Select Rate", list(rate_mapping.values()), index=4)
+        selected_rate = st.selectbox("Select Education Rate", list(rate_mapping.values()), index=4)
 
     # Reverse mappings
     reverse_rate_mapping = {v: k for k, v in rate_mapping.items()}
@@ -786,11 +786,19 @@ def matala3(crimes, education_df):
 def matala4(crimes, education_df):
     st.markdown("""
             <style>
+                /* Adjust width of selectboxes */
+                .stSelectbox select {
+                    width: 200px;  /* Set the width of the selectbox */
+                }
+                /* Title customization */
                 .custom-title {
-                    font-size: 30px;  /* Font size */
-                    font-weight: bold;  /* Font weight */
+                    font-size: 30px;
+                    font-weight: bold;
                 }
             </style>
+        """, unsafe_allow_html=True)
+
+    st.markdown("""
             <div class="custom-title">
                 Distribution of Settlements Based on Crime and Education Rate, with Socio-Economic Grouping
             </div>
@@ -883,6 +891,7 @@ def matala4(crimes, education_df):
 
     # Display the chart
     st.plotly_chart(fig4)
+
 
 
 
