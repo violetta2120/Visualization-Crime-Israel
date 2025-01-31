@@ -521,16 +521,18 @@ def matala2(crimes, education_df):
     # Filter for the year 2023
     crime_data = crime_data[crime_data['Year'] == 2023]
 
+    # Default values
+    default_crime = "All Crimes"
     default_rate = '5UnitsMathematicsRate'
 
     # Crime type selection
     crime_options = list(statistic_group_translation.values())
-    default_crime_index = min(11, len(crime_options) - 1)
+    default_crime_index = crime_options.index(default_crime)
     col1, col2 = st.columns(2)
     with col1:
         selected_crime = st.selectbox("Select Type of Crime", crime_options, index=default_crime_index)
     with col2:
-        selected_rate = st.selectbox("Select Education Metric", list(education_translation.values()), index=4)
+        selected_rate = st.selectbox("Select Education Metric", list(education_translation.values()), index=3)
 
     # Reverse mappings
     reverse_crime_mapping = {v: k for k, v in statistic_group_translation.items()}
@@ -546,6 +548,7 @@ def matala2(crimes, education_df):
 
     # Apply district name translations
     combined_data['DistrictName'] = combined_data['DistrictName'].map(district_translation).fillna(combined_data['DistrictName'])
+
     # Bar plot with ColorBrewer palette
     fig = go.Figure()
 
@@ -586,6 +589,7 @@ def matala2(crimes, education_df):
 
     # Display the plot
     st.plotly_chart(fig)
+
 
 
 def matala3(crimes, education_df):
