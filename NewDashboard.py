@@ -521,43 +521,20 @@ def matala2(crimes, education_df):
     # Filter for the year 2023
     crime_data = crime_data[crime_data['Year'] == 2023]
 
-    # Mappings for crime types (translated to English)
-    statistic_group_mapping = {
-        'עבירות בטחון': 'Security Offenses',
-        'עבירות כלפי המוסר': 'Moral Offenses',
-        'עבירות כלפי הרכוש': 'Property Offenses',
-        'עבירות מין': 'Sex Offenses',
-        'עבירות מרמה': 'Fraud Offenses',
-        'עבירות נגד אדם': 'Offenses Against a Person',
-        'עבירות נגד גוף': 'Offenses Against the Body',
-        'עבירות סדר ציבורי': 'Public Order Offenses',
-        'עבירות רשוי': 'License Offenses',
-        'עבירות תנועה': 'Traffic Offenses',
-        'כל העבירות': 'All Crimes'
-    }
-
-    # Mappings for education rates (translated to English)
-    rate_mapping = {
-        'RateInTechEdu': "Students in Technological Education",
-        'DropoutRate': "Dropout Rate",
-        'EligibleForBagrutRate': "Eligible for Bagrut",
-        '5UnitsMathematicsRate': "Eligible for 5-Unit Mathematics",
-        'EligibleForExcellentBagrutRate': "Eligible for Excellence Bagrut"
-    }
     default_rate = '5UnitsMathematicsRate'
 
     # Crime type selection
-    crime_options = list(statistic_group_mapping.values())
+    crime_options = list(statistic_group_translation.values())
     default_crime_index = min(11, len(crime_options) - 1)
     col1, col2 = st.columns(2)
     with col1:
         selected_crime = st.selectbox("Select Type of Crime", crime_options, index=default_crime_index)
     with col2:
-        selected_rate = st.selectbox("Select Education Metric", list(rate_mapping.values()), index=4)
+        selected_rate = st.selectbox("Select Education Metric", list(education_translation.values()), index=4)
 
     # Reverse mappings
-    reverse_crime_mapping = {v: k for k, v in statistic_group_mapping.items()}
-    reverse_rate_mapping = {v: k for k, v in rate_mapping.items()}
+    reverse_crime_mapping = {v: k for k, v in statistic_group_translation.items()}
+    reverse_rate_mapping = {v: k for k, v in education_translation.items()}
     selected_crime_column = reverse_crime_mapping.get(selected_crime, 'כל העבירות')
     selected_rate_column = reverse_rate_mapping.get(selected_rate, default_rate)
 
