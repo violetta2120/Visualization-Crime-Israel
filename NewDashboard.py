@@ -579,8 +579,8 @@ def matala2(crimes, education_df):
     # Update layout with translated labels
     fig.update_layout(
         barmode='group',  # Grouped bars
-        xaxis={'title': 'District Name', 'titlefont': {'size': 18}, 'tickfont': {'size': 16}},
-        yaxis={'title': 'Percentage', 'titlefont': {'size': 18}, 'tickfont': {'size': 16}},
+        xaxis={'title': {'text': 'District Name', 'font': {'size': 18}}, 'tickfont': {'size': 16}},
+        yaxis={'title': {'text': 'Percentage', 'font': {'size': 18}}, 'tickfont': {'size': 16}},
         height=550,
         width=1300,
         margin={'l': 50, 'r': 50, 't': 80, 'b': 100},
