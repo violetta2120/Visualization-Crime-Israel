@@ -805,7 +805,8 @@ def matala4(crimes, education_df):
     df_scatter = df_scatter[
         (df_scatter['StatisticGroup'] == selected_crime_type) &
         (df_scatter['Year'] == 2023) &
-        df_scatter[selected_rate].notna()
+        df_scatter[selected_rate].notna() &
+        (df_scatter['SocioeconomicGroup'] < 10) 
     ]
 
     # Create the scatter plot with customized hovertemplate
