@@ -703,7 +703,7 @@ def matala3(crimes, education_df):
             tickfont=dict(
                 size=15,
             ),
-            tickformat=".0%"  # Add the percentage sign to the ticks
+            tickformat=".2%"  # Add the percentage sign to the ticks
         ),
         xaxis=dict(
             tickmode='array',
@@ -827,13 +827,13 @@ def matala4(crimes, education_df):
             title=education_translation[selected_rate],
             title_font=dict(size=18),
             tickfont=dict(size=14),
-            tickformat=".1%"
+            tickformat=".2%"
         ),
         yaxis=dict(
             title="Crime Rate",
             title_font=dict(size=18),
             tickfont=dict(size=14),
-            tickformat=".1%"
+            tickformat=".2%"
         ),
         legend=dict(
             title="Socio-Economic Group",
