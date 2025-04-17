@@ -827,13 +827,13 @@ def matala4(crimes, education_df):
             title=education_translation[selected_rate],
             title_font=dict(size=18),
             tickfont=dict(size=14),
-            tickformat=".0%"
+            tickformat=".1%"
         ),
         yaxis=dict(
             title="Crime Rate",
             title_font=dict(size=18),
             tickfont=dict(size=14),
-            tickformat=".0%"
+            tickformat=".1%"
         ),
         legend=dict(
             title="Socio-Economic Group",
