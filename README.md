@@ -30,12 +30,10 @@ Each view includes interactive controls (crime-type, district, and education-met
 
 ## Data Sources
 
-The dataset used in this project was compiled from publicly available data published by:
+The datasets used in this project was compiled from publicly available data published by:
 
 - **Israel Police** - crime statistics and related public data.
 - **Israel Ministry of Education** - educational, socio-economic and demographic data.
-
-The data from these sources was collected, cleaned, merged, and preprocessed for use in this project.
 
 ## Key findings
 
