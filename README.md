@@ -44,6 +44,12 @@ The datasets used in this project was compiled from publicly available data publ
 
 > These are exploratory, correlational observations from the data - they describe patterns, not proven causation.
 
+## Conclusion
+
+Across all three lenses - district, education, and socio-economic status - the same pattern appears: areas with stronger educational outcomes and higher socio-economic standing tend to have lower crime rates. This suggests that education and socio-economic conditions are closely tied to crime patterns in Israel, and that investment in education could be a meaningful part of reducing crime.
+
+It's important to read this as a correlation rather than proof of cause. Education, income, and living conditions tend to move together, so education may be one of several connected factors rather than the sole driver. Confirming a causal effect would require further analysis - for example, tracking changes within the same settlements over time. Still, the consistency of the pattern across every view makes education a clear and promising direction for deeper study.
+
 ## Tech stack
 
 - **Python**
